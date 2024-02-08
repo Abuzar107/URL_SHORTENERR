@@ -7,7 +7,7 @@ function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = axios
+    axios
       .post("http://localhost:5000/short/url", { url })
       .then((result) => {
         const getUrl = `http://localhost:5000/${result.data.id.shortId}`;
